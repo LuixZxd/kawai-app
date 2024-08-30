@@ -1,0 +1,241 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fefefe;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Header Styles */
+.header {
+    position: relative;
+    text-align: center;
+    background-color: #ffb3b3;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #ff6666;
+}
+
+.header-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0 0 20px 20px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.site-tagline {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+.nav-menu {
+    margin: 20px 0;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #ff66b2;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-menu a:hover {
+    background-color: #ff3399;
+    transform: scale(1.05);
+}
+
+.nav-menu i {
+    margin-right: 8px;
+}
+
+/* Main Content Styles */
+.app-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.site-description {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffebf0;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #555;
+    font-size: 1.1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.app-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 2px solid #ffb3b3;
+}
+
+.app-item img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 200px; /* Establece una altura fija */
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+    border-bottom: 2px solid #ffb3b3; /* Borde opcional debajo de la imagen */
+}
+
+.app-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.app-info h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #ff6666;
+}
+
+.app-info p {
+    margin: 10px 0;
+    color: #777;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: #ff66b2;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #ff3399;
+    transform: scale(1.05);
+}
+
+.app-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Details Popup Styles */
+.app-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.app-details.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.app-details .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff66b2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.app-details .close-btn:hover {
+    background: #ff3399;
+}
+
+#details-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #ffb3b3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid #ff6666;
+    position: relative;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1em;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
